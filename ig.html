@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IG Assistência - Reparo de Computadores</title>
+  <!-- CDN Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Arquivo CSS Externo -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- NAVBAR & DROPDOWN -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#">IG Assistência</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="menu">
+        <ul class="navbar-nav ms-auto align-items-center">
+          <li class="nav-item"><a class="nav-link active" href="#home">Início</a></li>
+          <li class="nav-item"><a class="nav-link" href="#servicos">Serviços</a></li>
+          <!-- DROPDOWN -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Atendimento</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#contato">Orçamento</a></li>
+              <li><a class="dropdown-item" href="#contato">Suporte Limpeza</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- CAROUSEL -->
+  <section id="home">
+    <div id="carouselHome" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="https://picsum.photos/id/1/1200/400" class="d-block w-100 banner-img" alt="Assistência">
+          <!-- TIPOGRAFIA E BS5 FLEX -->
+          <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+            <h1 class="display-5 fw-bold text-light">IG Assistência</h1>
+            <p class="lead">Conserto rápido e garantido para seu PC ou Notebook.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="container my-4">
+
+    <!-- ALERTAS -->
+    <div class="alert alert-info alert-dismissible fade show text-center" role="alert">
+      <strong>Promoção!</strong> Avaliação gratuita para novos clientes neste mês.
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Fechar"></button>
+    </div>
+
+    <!-- SEÇÃO SOBRE COM IMAGENS E BS5 FLEX -->
+    <section class="my-5">
+      <div class="d-flex flex-column flex-md-row align-items-center gap-4">
+        <!-- IMAGENS (img-fluid e img-thumbnail) -->
+        <img src="https://picsum.photos/id/180/400/300" class="img-fluid img-thumbnail rounded" alt="Bancada de reparo">
+        <div>
+          <!-- TIPOGRAFIA E CORES -->
+          <h2 class="text-primary fw-bold">Especialistas em Manutenção</h2>
+          <p class="text-muted">Na <strong>IG Assistência</strong>, resolvemos problemas de lentidão, substituição de peças, formatação e limpeza interna completa.</p>
+          <!-- BOTÕES -->
+          <a href="#contato" class="btn btn-primary rounded-pill">Pedir Orçamento</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CARDS & BS5 FLEX -->
+    <section id="servicos" class="my-5">
+      <h2 class="text-center text-primary fw-bold mb-4">Nossos Serviços</h2>
+      <div class="d-flex flex-column flex-md-row justify-content-between gap-3">
+        
+        <!-- CARD 1 -->
+        <div class="card flex-fill">
+          <div class="card-body text-center">
+            <h5 class="card-title text-primary fw-bold">Formatação</h5>
+            <p class="card-text text-muted">Instalação limpa do sistema operacional, drivers e programas essenciais.</p>
+            <!-- BOTÕES E CORES -->
+            <button class="btn btn-outline-primary btn-sm">Ver Mais</button>
+          </div>
+        </div>
+
+        <!-- CARD 2 -->
+        <div class="card flex-fill">
+          <div class="card-body text-center">
+            <h5 class="card-title text-primary fw-bold">Limpeza & Thermal</h5>
+            <p class="card-text text-muted">Remoção de poeira e troca de pasta térmica para evitar superaquecimento.</p>
+            <button class="btn btn-outline-primary btn-sm">Ver Mais</button>
+          </div>
+        </div>
+
+        <!-- CARD 3 -->
+        <div class="card flex-fill">
+          <div class="card-body text-center">
+            <h5 class="card-title text-primary fw-bold">Upgrade SSD</h5>
+            <p class="card-text text-muted">Deixe seu computador até 10x mais rápido com a instalação de SSD.</p>
+            <button class="btn btn-outline-primary btn-sm">Ver Mais</button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- FORMULÁRIOS -->
+    <section id="contato" class="my-5 p-4 bg-light rounded">
+      <h3 class="text-primary fw-bold mb-3">Solicitar Orçamento</h3>
+      <form>
+        <div class="mb-3">
+          <label for="nome" class="form-label fw-bold">Seu Nome</label>
+          <input type="text" class="form-control" id="nome" placeholder="Digite seu nome">
+        </div>
+        <div class="mb-3">
+          <label for="servico" class="form-label fw-bold">Serviço Desejado</label>
+          <select class="form-select" id="servico">
+            <option selected>Selecione um serviço...</option>
+            <option value="1">Formatação</option>
+            <option value="2">Limpeza Preventiva</option>
+            <option value="3">Troca de Peças</option>
+          </select>
+        </div>
+        <div class="mb-3 form-check">
+          <input type="checkbox" class="form-check-input" id="urgente">
+          <label class="form-check-label text-danger" for="urgente">Preciso de atendimento urgente</label>
+        </div>
+        <!-- BOTÕES -->
+        <button type="submit" class="btn btn-success w-100">Enviar Solicitação</button>
+      </form>
+    </section>
+
+  </div>
+
+  <!-- RODAPÉ -->
+  <footer class="bg-dark text-light text-center py-3">
+    <p class="mb-0 text-muted">&copy; 2026 IG Assistência - Todos os direitos reservados.</p>
+  </footer>
+
+  <!-- CDN Bootstrap 5 JavaScript (Necessário para Navbar, Dropdown e Carousel) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

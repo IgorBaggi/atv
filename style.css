@@ -1,0 +1,26 @@
+/* Customizações para complementar o Bootstrap 5 na IG Assistência */
+
+/* Ajuste da imagem do Carousel */
+.banner-img {
+  height: 300px;
+  object-fit: cover;
+  filter: brightness(0.6);
+}
+
+/* Centralização vertical do conteúdo do Carousel */
+.carousel-caption {
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+/* Transição suave nas bordas dos Cards ao passar o mouse */
+.card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
